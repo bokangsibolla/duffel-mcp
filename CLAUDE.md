@@ -41,6 +41,15 @@ DUFFEL_ACCESS_TOKEN=duffel_test_xxx npm run live-smoke     # real API check
 npm publish                                                # runs build via prepublishOnly
 ```
 
+## Verification
+
+Run before claiming a change is done, and show the passing output:
+
+```bash
+npm run build   # tsc, catches type errors
+npm test        # vitest, offline shaping unit tests
+```
+
 ## Conventions
 
 - Read-only by design. v0.1 searches and inspects offers but does NOT book. A booking tool (`create_order`) is roadmap-only and must sit behind an explicit, human-confirmed opt-in, test mode by default.
